@@ -1,0 +1,19 @@
+body {
+    color: aquamarine;
+    background-color: red;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+header {
+      background-color: white;
+}
+
+img{
+    width: 150px;
+    height: 150px;
+}
