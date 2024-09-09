@@ -1,19 +1,116 @@
 body {
-    color: aquamarine;
-    background-color: red;
-}
-
-ul {
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
     display: flex;
-    justify-content: space-between;
-    padding: 50px;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-header {
-      background-color: white;
+.header {
+    background-color: #417d36;
+    color: #dfeebc;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
-img{
-    width: 150px;
-    height: 150px;
+main {
+    flex: 1;
+    padding: 80px 20px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 50px;
+}
+
+.gibi-grid {
+    display: flex;
+    flex-wrap: nowrap; 
+    justify-content: flex-start; 
+    gap: 20px;
+    overflow-x: auto; 
+    padding: 10px; 
+    max-width: 100%; 
+}
+
+.gibi {
+    background-color: #b1c5b1;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px black;
+    overflow: hidden;
+    width: 150px; 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;   
+    padding: 15px; 
+}
+
+.gibi img {
+    width: 100%;
+    height: 180px; 
+}
+
+.gibi h2 {
+    font-size: 18px; 
+    margin: 10px 0; 
+    color: black; 
+}
+
+.gibi p {
+    font-size: 10px; 
+    color: #666; 
+    padding: 0 5px 10px;
+}
+
+footer {
+    background-color: #417d36;
+    color: #dfeebc;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 15px;
+}
+
+button {
+    background-color: #000000; 
+    color: #ffffff; 
+    border: none;
+    padding: 10px 20px;
+    margin-top: auto;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 12px;
+    margin-bottom: 3px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .gibi-grid {
+        flex-direction: column;
+        align-items: center;
+        overflow-x: hidden; 
+    }
+    .gibi {
+        width: 80%; 
+    }
+}
+
+@media (max-width: 480px) {
+    .gibi {
+        width: 90%; 
+    }
 }
